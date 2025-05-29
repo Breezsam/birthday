@@ -1,4 +1,3 @@
-/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* Background Video */
 #bgVideo {
   position: fixed;
   top: 0;
@@ -25,7 +23,6 @@ body {
   filter: brightness(0.6);
 }
 
-/* Intro Section */
 .intro {
   height: 100vh;
   display: flex;
@@ -33,16 +30,18 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  text-align: center;
 }
 
 .typewriter {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
   white-space: nowrap;
   border-right: 3px solid white;
   overflow: hidden;
   width: 0;
   animation: typing 4s steps(30, end) forwards;
+  max-width: 90%;
 }
 
 @keyframes typing {
@@ -53,7 +52,7 @@ body {
 
 button {
   padding: 12px 24px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background: #ff4e91;
   color: white;
   border: none;
@@ -66,40 +65,41 @@ button:hover {
   background: #e83e81;
 }
 
-/* Slideshow */
 .slideshow {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 25px;
   overflow-x: auto;
   background: rgba(255, 255, 255, 0.05);
+  scroll-snap-type: x mandatory;
 }
 
 .slideshow img {
-  width: 250px;
-  height: 350px;
+  flex: 0 0 auto;
+  width: 220px;
+  height: 320px;
   border-radius: 16px;
   object-fit: cover;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s ease;
+  scroll-snap-align: center;
 }
 
 .slideshow img:hover {
   transform: scale(1.05);
 }
 
-/* Sections */
 .sections {
-  padding: 100px 20px;
+  padding: 80px 20px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
 }
 
 .panel {
-  font-size: 2rem;
-  padding: 50px;
+  font-size: 1.6rem;
+  padding: 40px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
@@ -110,11 +110,10 @@ button:hover {
   display: none;
 }
 
-/* ✅ Responsive Design */
+/* ✅ Mobile Responsive Fixes */
 @media (max-width: 768px) {
   .typewriter {
-    font-size: 1.8rem;
-    width: 100%;
+    font-size: 1.6rem;
   }
 
   button {
@@ -122,49 +121,33 @@ button:hover {
     padding: 10px 20px;
   }
 
-  .slideshow {
-    gap: 10px;
-    padding: 20px;
-    overflow-x: scroll;
-  }
-
   .slideshow img {
-    width: 180px;
-    height: 250px;
-  }
-
-  .sections {
-    padding: 60px 10px;
-    gap: 40px;
+    width: 160px;
+    height: 240px;
   }
 
   .panel {
-    font-size: 1.2rem;
-    padding: 30px 15px;
+    font-size: 1.1rem;
+    padding: 25px 15px;
   }
 
-  h1,
-  p {
-    padding: 0 10px;
+  .sections {
+    padding: 40px 10px;
+    gap: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .typewriter {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
-  button {
-    font-size: 0.95rem;
-    padding: 10px 16px;
+  .slideshow img {
+    width: 140px;
+    height: 200px;
   }
 
   .panel {
     font-size: 1rem;
-  }
-
-  .slideshow img {
-    width: 150px;
-    height: 220px;
   }
 }
