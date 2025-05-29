@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
+/* Background Video */
 #bgVideo {
   position: fixed;
   top: 0;
@@ -23,12 +25,14 @@ body {
   filter: brightness(0.6);
 }
 
+/* Intro Section */
 .intro {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .typewriter {
@@ -42,7 +46,9 @@ body {
 }
 
 @keyframes typing {
-  to { width: 100%; }
+  to {
+    width: 100%;
+  }
 }
 
 button {
@@ -60,6 +66,7 @@ button:hover {
   background: #e83e81;
 }
 
+/* Slideshow */
 .slideshow {
   display: flex;
   justify-content: center;
@@ -74,7 +81,7 @@ button:hover {
   height: 350px;
   border-radius: 16px;
   object-fit: cover;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s ease;
 }
 
@@ -82,6 +89,7 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* Sections */
 .sections {
   padding: 100px 20px;
   display: flex;
@@ -100,4 +108,63 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .slideshow {
+    gap: 10px;
+    padding: 20px;
+    overflow-x: scroll;
+  }
+
+  .slideshow img {
+    width: 180px;
+    height: 250px;
+  }
+
+  .sections {
+    padding: 60px 10px;
+    gap: 40px;
+  }
+
+  .panel {
+    font-size: 1.2rem;
+    padding: 30px 15px;
+  }
+
+  h1,
+  p {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+
+  .panel {
+    font-size: 1rem;
+  }
+
+  .slideshow img {
+    width: 150px;
+    height: 220px;
+  }
 }
