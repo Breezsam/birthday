@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.typewriter {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background: #ff4e91;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e83e81;
+}
+
+.slideshow {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.slideshow img {
+  width: 250px;
+  height: 350px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease;
+}
+
+.slideshow img:hover {
+  transform: scale(1.05);
+}
+
+.sections {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.panel {
+  font-size: 2rem;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.hidden {
+  display: none;
+}
