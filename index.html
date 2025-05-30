@@ -10,28 +10,25 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+
   <!-- Background Video -->
-  <video autoplay muted loop id="bgVideo" playsinline>
-    <source
-      src="https://cdn.coverr.co/videos/coverr-birthday-celebration-1767/1080p.mp4"
-      type="video/mp4"
-    />
+  <video autoplay muted loop id="bgVideo">
+    <source src="https://cdn.coverr.co/videos/coverr-birthday-celebration-1767/1080p.mp4" type="video/mp4" />
     Your browser does not support video playback.
   </video>
 
   <!-- Background Music -->
   <audio id="bgMusic" loop>
-    <source
-      src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Kevin_MacLeod/Jazz_Sampler/Kevin_MacLeod_-_Life_of_Riley.mp3"
-      type="audio/mp3"
-    />
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Kevin_MacLeod/Jazz_Sampler/Kevin_MacLeod_-_Life_of_Riley.mp3" type="audio/mp3" />
   </audio>
 
   <!-- Intro Section -->
   <div class="intro">
     <h1 class="typewriter">Happy Birthday Bushra 🎂</h1>
-    <button id="startBtn">Start Celebration</button>
-    <button id="musicToggle" style="margin-top:20px;">Play Music 🎵</button>
+    <button onclick="startExperience()">Start Celebration</button>
+    <button id="musicToggle" style="margin-top:20px; padding:10px 20px; border-radius:20px; background:#ff4e91; color:white; border:none; cursor:pointer;">
+      Play Music 🎵
+    </button>
   </div>
 
   <!-- Image Slideshow -->
@@ -45,34 +42,20 @@
   <div class="sections hidden" id="sections">
     <section class="panel">
       Wishing You Love & Joy 🎉
-      <p>
-        May Allah ﷻ bless you with a long life filled with His light, mercy,
-        and barakah. Ameen.
-      </p>
-      <p>
-        On your special day, I pray that Allah ﷻ continues to guide your heart,
-        protect you always, and fulfill all your halal dreams. Ameen.
-      </p>
+      <p>May Allah ﷻ bless you with a long life filled with His light, mercy, and barakah. Ameen.</p>
+      <p>On your special day, I pray that Allah ﷻ continues to guide your heart, protect you always, and fulfill all your halal dreams. Ameen.</p>
     </section>
     <section class="panel">
       Hope All Your Dreams Come True 💫
-      <p>
-        You are a blessing, Bushra. May Allah ﷻ write happiness, peace, and
-        success for you in both worlds.
-      </p>
+      <p>You are a blessing, Bushra. May Allah ﷻ write happiness, peace, and success for you in both worlds.</p>
       <p>اللهم بارك لها في عمرها، وحقق لها كل ما تتمناه في طاعتك</p>
     </section>
     <section class="panel">
       Celebrate This Special Day 🥳
-      <p>
-        Be like a rose—beautiful in modesty, gentle in heart. May your Imaan
-        grow stronger each day. 🌹
-      </p>
-      <p>
-        Happy Birthday, Princess! You’re not just a topper in college—but also a
-        star in your faith. Shine on!
-      </p>
+      <p>Be like a rose—beautiful in modesty, gentle in heart. May your Imaan grow stronger each day. 🌹</p>
+      <p>Happy Birthday, Princess! You’re not just a topper in college—but also a star in your faith. Shine on!</p>
     </section>
   </div>
+
 </body>
 </html>
