@@ -59,6 +59,7 @@ button {
   border-radius: 30px;
   cursor: pointer;
   transition: background 0.3s ease;
+  user-select: none;
 }
 
 button:hover {
@@ -110,7 +111,7 @@ button:hover {
   display: none;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive Fixes */
 @media (max-width: 768px) {
   .typewriter {
     font-size: 1.6rem;
